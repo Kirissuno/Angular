@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <h1>Personas</h1>
+  </div>
+  <div class="panel-body">
+      <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th>Direccion</th>
+                  <th>Calle</th>
+                  <th>Numero</th>
+                  <th>Accion</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let direccion of direcciones | async">
+                  <td>{{direccion.dni}}</td>
+                  <td>{{direccion.calle}}</td>
+                  <td>{{direccion.numero}}</td>
+                  <td><button (click)="borrarDireccion(direccion.dni)">Delete</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

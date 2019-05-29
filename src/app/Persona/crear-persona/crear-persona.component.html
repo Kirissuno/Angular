@@ -1,0 +1,31 @@
+<h3>Crear Persona</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required [(ngModel)]="persona.nombre" name="nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos" required [(ngModel)]="persona.apellidos" name="apellidos">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Telefono</label>
+          <input type="text" class="form-control" id="tlfn" required [(ngModel)]="persona.tlfn" name="tlfn">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Edad</label>
+        <input type="text" class="form-control" id="edad" required [(ngModel)]="persona.edad" name="edad">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Altura</label>
+        <input type="text" class="form-control" id="altura" required [(ngModel)]="persona.altura" name="altura">
+      </div>
+
+        <button type="submit" id="enviar" class="btn btn-success">Submit</button>
+    </form>
+</div>

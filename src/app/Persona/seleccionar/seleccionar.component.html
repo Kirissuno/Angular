@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()">
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Telefono</th>
+            <th>Edad</th>
+            <th>Altura</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        
+        <tr>
+          <td><input type="text" name="nombre" [(ngModel)]="persona.nombre"></td>
+          <td><input type="text" name="apellidos" [(ngModel)]="persona.apellidos"></td>
+          <td>{{persona.tlfn}}</td>
+          <td><input type="number" name="edad" [(ngModel)]="persona.edad"></td>
+          <td><input type="number" name="altura" [(ngModel)]="persona.altura"></td>
+            <td>
+                <button class="guardar" type="submit">Guardar</button>
+                <button class="atras" (click)="atras()">Atras</button>
+            </td>
+        </tr>
+      
+    </tbody>
+
+  </table>
+</form>
